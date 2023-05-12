@@ -6,10 +6,9 @@ let Game = function (pTitle, pGenre, pRelease, pURL) {
   this.Genre = pGenre;
   this.Release = pRelease;
   this.URL = pURL;
+  this.ID = Math.random().toString(16).slice(5); // Unique ID per object created
 };
 
-gameArr.push(new Game("The Witcher 3: Wild Hunt","Action; Open World","5/18/2015","https://www.youtube.com/embed/XHrskkHf958"));
-gameArr.push(new Game("Stray","Adventure","7/19/2022","https://www.youtube.com/embed/4uP2MyUL49s"));
 gameArr.push(new Game("Red Dead Redemption 2", "Action; Open World", "10/26/2018","https://www.youtube.com/embed/HVRzx17WHVk"))
 gameArr.push(new Game("Pokémon Legends: Arceus", "Adventure; Open World", "1/28/2022", "https://www.youtube.com/embed/I4RynqpahT8"))
 gameArr.push(new Game("Assassin's Creed Mirage", "Action; Rogue-like", "TBA 2023", "https://www.youtube.com/embed/x55lAlFtXmw"))
@@ -41,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("genre").value = "";
     document.getElementById("release").value = "";
     document.getElementById("URL").value = "";
-
+console.log(ID)
     // refresh library
     createList();
   });
 
-  document.getElementById("buttonClear").addEventListener("click", function () {
+    document.getElementById("buttonClear").addEventListener("click", function () {
     document.getElementById("title").value = "";
     document.getElementById("genre").value = "";
     document.getElementById("release").value = "";
