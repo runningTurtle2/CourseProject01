@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
@@ -13,111 +16,122 @@
   </head>
 
   <body>
-<!--========================================================-->
-<div data-role="page" id="about">
-
-    <div data-role="header" data-theme='b'>
+    <!--========================================================-->
+    <div data-role="page" id="about">
+      <div data-role="header" data-theme="b">
         <h1>Game Tracker</h1>
 
         <div data-role="navbar">
-            <ul>
-                <li><a href="#about" data-transition="flip">About</a></li>
-                <li><a href="#library" data-transition="flip">Game Library</a></li>
-                <li><a href="#add" data-transition="flip">Add</a></li>
-            </ul>
+          <ul>
+            <li><a href="#about" data-transition="flip">About</a></li>
+            <li><a href="#library" data-transition="flip">Game Library</a></li>
+            <li><a href="#add" data-transition="flip">Add</a></li>
+            <li><a href="#newpage" data-transition="flip">Newpage</a></li>
+          </ul>
         </div>
-    </div>
-    <div  data-role="content" data-theme="a">
-        <p>This webpage is Game Tracker, created to track game titles that we enjoy and are excited for. <br><br>
-           The Game Library tab includes a list of games that we have played or own, and some unreleased games that we are wanting to own.<br><br>
-           Each game features their genre, release date, and official trailer. 
-      </p>
+      </div>
+      <div data-role="content" data-theme="a">
+        <p>
+          This webpage is Game Tracker, created to track game titles that we
+          enjoy and are excited for. <br /><br />
+          The Game Library tab includes a list of games that we have played or
+          own, and some unreleased games that we are wanting to own.<br /><br />
+          Each game features their genre, release date, and official trailer.
+        </p>
+      </div>
 
-    </div>
-
-    <div data-role="footer" data-theme="c">
+      <div data-role="footer" data-theme="c">
         <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
+      </div>
     </div>
-</div>
-<!--=====================================================-->
-<div data-role="page" id="library">
-
-    <div data-role="header" data-theme='b'>
+    <!--=====================================================-->
+    <div data-role="page" id="library">
+      <div data-role="header" data-theme="b">
         <h1>Game Tracker</h1>
-            
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#about" data-transition="flip">About</a></li>
-                <li><a href="#library" data-transition="flip">Game Library</a></li>
-                <li><a href="#add" data-transition="flip">Add</a></li>
-            </ul>
-        </div>
-    </div>
-    <div data-role="content" data-theme="a">
-        <p>List of games and information.<br></p>
-          <div>
-            <ul id="gameList"></ul>
-      </div></div>
 
-    <div data-role="footer" data-theme="c">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about" data-transition="flip">About</a></li>
+            <li><a href="#library" data-transition="flip">Game Library</a></li>
+            <li><a href="#add" data-transition="flip">Add</a></li>
+            <li><a href="#newpage" data-transition="flip">Newpage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content" data-theme="a">
+        <p>List of games and information.<br /></p>
+        <div>
+          <ul id="gameList"></ul>
+        </div>
+      </div>
+
+      <div data-role="footer" data-theme="c">
         <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
+      </div>
     </div>
-</div>
- <!--============================================================ -->
+    <!--============================================================ -->
     <div data-role="page" id="add">
-
-        <div data-role="header" data-theme='b'>
-            <h1>Game Tracker</h1>
-                
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#about" data-transition="flip">About</a></li>
-                    <li><a href="#library" data-transition="flip">Game Library</a></li>
-                    <li><a href="#add" data-transition="flip">Add</a></li>
-                </ul>
-            </div>
-        </div>
-        <div data-role="content" data-theme="a">
-            <p>Add a game to the Library? </p> 
-		<br>
-
-      Title: <input type="text" value="" id="title">
-      Genre: <input type="text" value="" id="genre">
-      Release Date: <input type="text" value="" id="release">
-      Trailer Embeded URL: <input type="text" value="" id="URL">
-   		<br>
-      <input type="button" value="Click To Add" id="buttonAdd" data-inline="true" />
-      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
-    </div>
-
-        <div data-role="footer" data-theme="c">
-            <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
-        </div>
-    </div>
- <!--============================================================ -->
-    <div data-role="page" id="newpage">
-
-    <div data-role="header" data-theme='b'>
+      <div data-role="header" data-theme="b">
         <h1>Game Tracker</h1>
-            
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#about" data-transition="flip">About</a></li>
-                <li><a href="#library" data-transition="flip">Game Library</a></li>
-                <li><a href="#add" data-transition="flip">Add</a></li>
-            </ul>
-        </div>
-    </div>
-      
-    <div data-role="content" data-theme="a">
-        <p>This is for the new page<br></p>
-    </div>
 
-    <div data-role="footer" data-theme="c">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about" data-transition="flip">About</a></li>
+            <li><a href="#library" data-transition="flip">Game Library</a></li>
+            <li><a href="#add" data-transition="flip">Add</a></li>
+            <li><a href="#newpage" data-transition="flip">Newpage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content" data-theme="a">
+        <p>Add a game to the Library?</p>
+        <br />
+
+        Title: <input type="text" value="" id="title" /> Genre:
+        <input type="text" value="" id="genre" /> Release Date:
+        <input type="text" value="" id="release" /> Trailer Embeded URL:
+        <input type="text" value="" id="URL" />
+        <br />
+        <input
+          type="button"
+          value="Click To Add"
+          id="buttonAdd"
+          data-inline="true"
+        />
+        <input
+          type="button"
+          value="Clear Data"
+          id="buttonClear"
+          data-inline="true"
+        />
+      </div>
+
+      <div data-role="footer" data-theme="c">
         <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
+      </div>
     </div>
-</div>
-  </body>
-</html>
+    <!--============================================================ -->
+    <div data-role="page" id="newpage">
+      <div data-role="header" data-theme="b">
+        <h1>Game Tracker</h1>
+
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about" data-transition="flip">About</a></li>
+            <li><a href="#library" data-transition="flip">Game Library</a></li>
+            <li><a href="#add" data-transition="flip">Add</a></li>
+            <li><a href="#newpage" data-transition="flip">Newpage</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-role="content" data-theme="a">
+        <p>This is for the new page<br /></p>
+      </div>
+
+      <div data-role="footer" data-theme="c">
+        <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
+      </div>
+    </div>
   </body>
 </html>
