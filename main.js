@@ -68,12 +68,9 @@ $(document).on("pagebeforeshow", "#library", function (event) {
  gameArr = JSON.parse(localStorage.getItem("gameArr"));
   //let pointer = GetArrayPointer(localID);     // Crashing display page
 
-/*   document.getElementById("gamelist").innerHTML =
-    "The title is: " + gameArr[pointer].Title;
-  document.getElementById("gamelist").innerHTML =
-    "Year released: " + gameArr[pointer].release;
-  document.getElementById("gamelist").innerHTML =
-    "Genre: " + gameArr[pointer].Genre;
+/* document.getElementById("gamelist").innerHTML = gameArr[pointer].Title;
+  document.getElementById("gamelist").innerHTML = gameArr[pointer].release;
+  document.getElementById("gamelist").innerHTML = gameArr[pointer].Genre;
   document.getElementById("gamelist").innerHTML = gameArr[pointer].URL; */
 });
 
