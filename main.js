@@ -8,7 +8,6 @@ let Game = function (pTitle, pGenre, pRelease, pURL) {
   this.URL = pURL;
   this.ID = Math.random().toString(16).slice(5); // Unique ID per object created
 };
-
 gameArr.push(new Game("Red Dead Redemption 2","Action; Open World","10/26/2018","https://www.youtube.com/embed/HVRzx17WHVk"));
 gameArr.push(new Game("Pokémon Legends: Arceus","Adventure; Open World","1/28/2022","https://www.youtube.com/embed/I4RynqpahT8"));
 gameArr.push(new Game("Assassin's Creed Mirage","Action; Rogue-like","TBA 2023","https://www.youtube.com/embed/x55lAlFtXmw"));
@@ -17,7 +16,7 @@ gameArr.push(new Game("The Legend of Zelda: Tears of the Kingdom","Action; Open 
 gameArr.push(new Game("Hollow Knight: Silksong","Action; Adventure","TBA 2023","https://www.youtube.com/embed/JSfuFlhsxZY"));
 
 document.addEventListener("DOMContentLoaded", function () {
-  createList();
+
 
   // add button events
   document.getElementById("buttonAdd").addEventListener("click", function () {
@@ -51,30 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("release").value = "";
     document.getElementById("URL").value = "";
   });
+
+  $(document).on("pagebeforeshow", "#library", function (event) {
+    createList();
+  });
+
 });
-
-$(document).on("pagebeforeshow", "#library", function (event) {
-  // have to use jQuery
-  createList();
-});
-
-/************************************************************************************** */
-// need one for our details page to fill in the info based on the passed in ID
-$(document).on("pagebeforeshow", "#library", function (event) {
-  let localID = localStorage.getItem("parm"); // get the unique key back from the dictionairy
-
-
-  
- gameArr = JSON.parse(localStorage.getItem("gameArr"));
-  //let pointer = GetArrayPointer(localID);     // Crashing display page
-
-/* document.getElementById("gamelist").innerHTML = gameArr[pointer].title;
-  document.getElementById("gamelist").innerHTML = gameArr[pointer].release;
-  document.getElementById("gamelist").innerHTML = gameArr[pointer].genre;
-  document.getElementById("gamelist").innerHTML = gameArr[pointer].URL; */
-});
-
-/****************************************************************************************** */
 
 function createList() {
   let myUL = document.getElementById("gameList");
@@ -103,8 +84,8 @@ function createList() {
 
 function GetArrayPointer(localID) {
   for (let i = 0; i < gamearr.length; i++) {
-      if (localID === gamearr[i].ID) {
-          return i;
-      }
+    if (localID === gamearr[i].ID) {
+      return i;
     }
   }
+}
