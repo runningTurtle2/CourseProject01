@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
+    <link rel="stylesheet"href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="themes/Theme.min.css" />
     <title>jQuery Mobile App</title>
   </head>
 
@@ -90,7 +88,8 @@
         Title: <input type="text" value="" id="title" /> Genre:
         <input type="text" value="" id="genre" /> Release Date:
         <input type="text" value="" id="release" /> Trailer Embeded URL:
-        <input type="text" value="" id="URL" />
+        <input type="text" value="" id="URL" /> Article URL link:
+        <input type="text" value="" id="article"/>
         <br />
         <input
           type="button"
@@ -127,7 +126,7 @@
 
       <div data-role="content" data-theme="a">
         <p>This page is going to be a guessing game that the user can play. The idea is
-          that if the user guesses correctly, then they win a game from tbe library. 
+          that if the user guesses correctly, then they win a game from the library. 
           The game will then be removed from the game library <br /></p>
       </div>
 
@@ -135,5 +134,6 @@
         <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
       </div>
     </div>
+    <script src="game.js"></script>
   </body>
 </html>
