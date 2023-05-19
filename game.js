@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let myLi = document.createElement("li");
         myLi.innerHTML =
-      "<a href='" + obj.ArticalLink  + "' target='_blank'><span style='font-weight: bold;'>Title:</span> " + obj.Title +
+      "<a style='text-decoration:none' href='" + obj.ArticalLink  + "' target='_blank'><span style='font-weight: bold;'>Title:</span> " + obj.Title +
       "<br><span style='font-weight: bold;'>Genre:</span> " + obj.Genre +
       "<br><span style='font-weight: bold;'>Release:</span> " + obj.Release +
       "</a><br>" +
