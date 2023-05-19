@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <script src="main.js"></script>
+    <script src="game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="themes/Theme.min.css" />
     <title>jQuery Mobile App</title>
@@ -125,15 +126,22 @@
       </div>
 
       <div data-role="content" data-theme="a">
-        <p>This page is going to be a guessing game that the user can play. The idea is
-          that if the user guesses correctly, then they win a game from the library. 
-          The game will then be removed from the game library <br /></p>
+        <p>Guessing Game</p> 
+        <p>Pick a number between 1 and 10. 
+          If you win then you will recieve a random game from the Game Library. 
+          Good Luck! <br /></p>
+
+          <label for="play">Your guess:</label>
+          <input type="number" value="" id="play" min="1" max="10"/>
+          <input type="button" value="Guess" id="guess" data-inline="true" /><br><br>
+          <div>
+            <ul id="prize"></ul>
+          </div>
       </div>
 
       <div data-role="footer" data-theme="c">
         <sub>Copyright 2023 Bottle of Whiskey & Container of Water</sub>
       </div>
     </div>
-    <script src="game.js"></script>
   </body>
 </html>
